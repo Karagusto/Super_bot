@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>robot_base_description</name>
+ 
+  <version>0.0.0</version>
+ 
+  <description>This package has all mirus' description files</description>
+ 
+  <maintainer email="barral@yahoo.com.br">Alexandre Barral</maintainer>
+
+  <license>CLOSED</license>
+
+  <author email="barral@yahoo.com.br">Alexandre Barral</author> 
+
+
+  <buildtool_depend>catkin</buildtool_depend>   
+  <exec_depend>robot_state_publisher</exec_depend>
+ 
+</package>

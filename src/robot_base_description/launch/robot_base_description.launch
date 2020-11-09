@@ -1,0 +1,13 @@
+<launch>
+  <arg name="mirus_rviz" default="false" />
+  <arg name="config_mirus_rviz_file" default="$(find robot_base_description)/config/rviz/mirus_rviz.rviz" />
+  
+  <arg name="urdf_file" default="$(find robot_base_description)/config/urdf/mirus_description.urdf" />
+  <param name="robot_description" textfile="$(arg urdf_file)" />
+  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />    
+  </node>
+  
+  <node pkg="rviz" type="rviz" name="mirus_rviz_node" if="$(arg mirus_rviz)" args="-d '$(arg config_mirus_rviz_file)'"/>  
+</launch>
